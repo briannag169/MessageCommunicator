@@ -41,12 +41,6 @@ namespace MessageCommunicator
             _lengthIncludingEndSymbols = lengthIncludingEndSymbols;
             _lengthExcludingEndSymbols = lengthIncludingEndSymbols - endSymbols.Length;
             _fillSymbol = fillSymbol;
-
-            if (_lengthIncludingEndSymbols < _endSymbols.Length + 1)
-            {
-                throw new ArgumentException(
-                    "Length muss be longer than endsymbol length!", nameof(lengthIncludingEndSymbols));
-            }
         }
 
         /// <inheritdoc />
